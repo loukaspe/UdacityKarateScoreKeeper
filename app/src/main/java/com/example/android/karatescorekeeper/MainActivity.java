@@ -1,5 +1,6 @@
 package com.example.android.karatescorekeeper;
 
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,24 +10,30 @@ import com.example.android.karatescorekeeper.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scorePlayerA = 0;
-    int scorePlayerB = 0;
+    static int scorePlayerA = 0;
+    static int scorePlayerB = 0;
     final int IPPON_THREE = 3;
     final int WAZA_ARI_TWO = 2;
     final int YUKO_ONE = 1;
+    private TextView scoreViewA;
+    private TextView scoreViewB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+        scoreViewA = (TextView) findViewById(R.id.player_a_score);
+        scoreViewB = (TextView) findViewById(R.id.player_b_score);
+
+        scoreViewA.setText(String.valueOf(scorePlayerA));
+        scoreViewB.setText(String.valueOf(scorePlayerB));
+    }
     /**
      * Team A Functions.
      */
     private void displayForPlayerA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.player_a_score);
-        scoreView.setText(String.valueOf(score));
+        scoreViewA.setText(String.valueOf(score));
     }
 
     public void threePointIpponPlayerA(View view)
@@ -51,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
      * Team B Functions.
      */
     private void displayForPlayerB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.player_b_score);
-        scoreView.setText(String.valueOf(score));
+        scoreViewB.setText(String.valueOf(score));
     }
 
     public void threePointIpponPlayerB(View view)

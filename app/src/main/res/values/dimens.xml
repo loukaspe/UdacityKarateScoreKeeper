@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_padding">24dp</dimen>
+    <dimen name="medium_padding">16dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="button_margin">24dp</dimen>
+    <dimen name="small_button_margin">8dp</dimen>
+    <dimen name="reset_button_margin">32dp</dimen>
+    <dimen name="line_width">3dp</dimen>
+    <dimen name="score_font_size">80sp</dimen>
+    <dimen name="player_font_size">14sp</dimen>
+</resources>

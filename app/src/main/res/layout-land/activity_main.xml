@@ -7,15 +7,16 @@
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         android:orientation="vertical"
-        android:padding="10dp"
-        android:fillViewport="true">
+        android:padding="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/firstLinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -31,7 +32,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
                         android:gravity="center"
-                        android:padding="@dimen/medium_padding"
+                        android:padding="@dimen/small_padding"
                         android:text="@string/FirstPlayer"
                         android:textColor="@color/light_gray"
                         android:textSize="@dimen/player_font_size"
@@ -43,7 +44,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:gravity="center"
-                        android:paddingBottom="@dimen/large_padding"
+                        android:paddingBottom="@dimen/medium_padding"
                         android:paddingTop="@dimen/medium_padding"
                         android:text="@string/StartingScore"
                         android:textColor="@color/black"
@@ -98,7 +99,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
                         android:gravity="center"
-                        android:padding="@dimen/medium_padding"
+                        android:padding="@dimen/small_padding"
                         android:text="@string/SecondPlayer"
                         android:textColor="@color/light_gray"
                         android:textSize="@dimen/player_font_size"
@@ -110,7 +111,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-light"
                         android:gravity="center"
-                        android:paddingBottom="@dimen/large_padding"
+                        android:paddingBottom="@dimen/medium_padding"
                         android:paddingTop="@dimen/medium_padding"
                         android:text="@string/StartingScore"
                         android:textColor="@color/black"
@@ -153,7 +154,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
+                android:layout_below="@+id/firstLinearLayout"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/reset_button_margin"
                 android:background="@drawable/roundedbutton"
                 android:onClick="reset"

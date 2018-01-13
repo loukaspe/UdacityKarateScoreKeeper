@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Karate Score Keeper</string>
+    <string name="app_name">KarateScoreKeeper</string>
+    <string name="FirstPlayer">Karateka I</string>
+    <string name="SecondPlayer">Karateka II</string>
+    <string name="StartingScore">0</string>
+    <string name="ThreePoints">Ippon: 3P</string>
+    <string name="TwoPoints">Waza-ari: 2P</string>
+    <string name="OnePoint">Yuko: 1P</string>
+    <string name="Reset">Reset</string>
+
 </resources>
