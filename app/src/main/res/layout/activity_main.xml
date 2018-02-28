@@ -1,23 +1,20 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/karatefight">
-
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+ <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/karatefight"
+        android:fillViewport="true"
         android:orientation="vertical"
-        android:padding="10dp"
-        android:fillViewport="true">
+        android:padding="@dimen/scroll_view_padding">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/karatekas_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/medium_padding"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -38,6 +35,17 @@
                         android:textStyle="bold"/>
 
                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:padding="@dimen/small_padding"
+                        android:text="@string/Score_Label"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/label_font_size"
+                        android:textStyle="italic"/>
+
+                    <TextView
                         android:id="@+id/player_a_score"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -56,7 +64,7 @@
                         android:layout_marginBottom="@dimen/button_margin"
                         android:layout_marginLeft="@dimen/button_margin"
                         android:layout_marginRight="@dimen/button_margin"
-                        android:background="@drawable/roundedbutton"
+                        android:background="@drawable/roundedbuttonred"
                         android:onClick="threePointIpponPlayerA"
                         android:text="@string/ThreePoints"/>
 
@@ -66,18 +74,52 @@
                         android:layout_marginBottom="@dimen/button_margin"
                         android:layout_marginLeft="@dimen/button_margin"
                         android:layout_marginRight="@dimen/button_margin"
-                        android:background="@drawable/roundedbutton"
+                        android:background="@drawable/roundedbuttonred"
                         android:onClick="twoPointWazaariPlayerA"
                         android:text="@string/TwoPoints"/>
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_margin"
                         android:layout_marginLeft="@dimen/button_margin"
                         android:layout_marginRight="@dimen/button_margin"
-                        android:background="@drawable/roundedbutton"
+                        android:background="@drawable/roundedbuttonred"
                         android:onClick="onePointYukoPlayerA"
                         android:text="@string/OnePoint"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:padding="@dimen/small_padding"
+                        android:text="@string/Penalty_Label"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/label_font_size"
+                        android:textStyle="italic"/>
+
+                    <TextView
+                        android:id="@+id/player_a_penalties"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/medium_padding"
+                        android:paddingTop="@dimen/medium_padding"
+                        android:text="@string/StartingPenalties"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/penalty_font_size"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:background="@drawable/roundedbuttonred"
+                        android:onClick="penaltyPlayerA"
+                        android:text="@string/Penalty"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
@@ -105,6 +147,17 @@
                         android:textStyle="bold"/>
 
                     <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:padding="@dimen/small_padding"
+                        android:text="@string/Score_Label"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/label_font_size"
+                        android:textStyle="italic"/>
+
+                    <TextView
                         android:id="@+id/player_b_score"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -123,7 +176,7 @@
                         android:layout_marginBottom="@dimen/button_margin"
                         android:layout_marginLeft="@dimen/button_margin"
                         android:layout_marginRight="@dimen/button_margin"
-                        android:background="@drawable/roundedbutton"
+                        android:background="@drawable/roundedbuttonblue"
                         android:onClick="threePointIpponPlayerB"
                         android:text="@string/ThreePoints"/>
 
@@ -133,18 +186,52 @@
                         android:layout_marginBottom="@dimen/button_margin"
                         android:layout_marginLeft="@dimen/button_margin"
                         android:layout_marginRight="@dimen/button_margin"
-                        android:background="@drawable/roundedbutton"
+                        android:background="@drawable/roundedbuttonblue"
                         android:onClick="twoPointWazaariPlayerB"
                         android:text="@string/TwoPoints"/>
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_margin"
                         android:layout_marginLeft="@dimen/button_margin"
                         android:layout_marginRight="@dimen/button_margin"
-                        android:background="@drawable/roundedbutton"
+                        android:background="@drawable/roundedbuttonblue"
                         android:onClick="onePointYukoPlayerB"
                         android:text="@string/OnePoint"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:padding="@dimen/small_padding"
+                        android:text="@string/Penalty_Label"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/label_font_size"
+                        android:textStyle="italic"/>
+
+                    <TextView
+                        android:id="@+id/player_b_penalties"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/medium_padding"
+                        android:paddingTop="@dimen/medium_padding"
+                        android:text="@string/StartingPenalties"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/penalty_font_size"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:background="@drawable/roundedbuttonblue"
+                        android:onClick="penaltyPlayerB"
+                        android:text="@string/Penalty"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -152,14 +239,13 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
+                android:layout_below="@+id/karatekas_linear_layout"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/reset_button_margin"
-                android:background="@drawable/roundedbutton"
+                android:background="@drawable/roundedbuttonblue"
                 android:onClick="reset"
                 android:text="@string/Reset"
                 android:textAllCaps="true"/>
 
         </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+ </ScrollView>

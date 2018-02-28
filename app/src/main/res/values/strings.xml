@@ -3,9 +3,17 @@
     <string name="FirstPlayer">Karateka I</string>
     <string name="SecondPlayer">Karateka II</string>
     <string name="StartingScore">0</string>
+    <string name="StartingPenalties">0</string>
     <string name="ThreePoints">Ippon: 3P</string>
     <string name="TwoPoints">Waza-ari: 2P</string>
     <string name="OnePoint">Yuko: 1P</string>
+    <string name="Penalty">Penalty</string>
+    <string name="Penalty_Label">Penalties</string>
+    <string name="Score_Label">Score</string>
     <string name="Reset">Reset</string>
+    <string name="ScoreAWin">Player A Won as he outscored Player B by 8 points</string>
+    <string name="ScoreBWin">Player B Won as he outscored Player A by 8 points</string>
+    <string name="PenaltiesAWin">Player A Won as Player B was disqualified with 4 penalties</string>
+    <string name="PenaltiesBWin">Player B Won as Player A was disqualified with 4 penalties</string>
 
 </resources>
